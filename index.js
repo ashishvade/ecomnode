@@ -1,4 +1,5 @@
 const express=require('express')
+require('./db/connection')()
 const morgan=require('morgan')
 const app=express()
 app.use(express.json())
