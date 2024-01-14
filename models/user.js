@@ -9,7 +9,7 @@ const userSchema = new Schema({
     name:{type:String , required:true },
     isAdmin :{type:Boolean ,default:false},
   email:{type:String, required:true , unique:true},
-  phone:{type:Number,required:true},
+  phone:{type:Number},
   active:{type:Boolean,required:true,default:false},
   password:{type:String,required:true}
 
