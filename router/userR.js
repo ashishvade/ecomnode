@@ -1,11 +1,12 @@
 const express=require('express')
-const {getUsers,saveUser}=require('../controller/userC')
+const {getUsers,saveUser,loginUser}=require('../controller/userC')
 const userRouter=express.Router()
 
 userRouter
-.get('',getUsers)
+.get('/',getUsers)
 .put('',)
-.post('',saveUser)
-.delete('/user',)
+.post('/',saveUser)
+.post('/login',loginUser)
+.delete('',)
 
 module.exports =  { userRouter }

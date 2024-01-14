@@ -12,8 +12,10 @@
   "dependencies": {
     "express": "^4.18.2",
     "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.4",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "password-hash": "^1.2.2"
   }
 }

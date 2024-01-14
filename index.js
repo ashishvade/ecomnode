@@ -35,3 +35,11 @@ app.listen(3040,()=>{
 })
 
 app.use(handleError)
+
+const passwordHash=require('password-hash')
+console.log("inside indes.js")
+const generatePassword=passwordHash.generate('12345')
+console.log({generatePassword})
+const isValid=passwordHash.verify('123456',generatePassword)
+console.log({isValid})
+
