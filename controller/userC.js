@@ -113,4 +113,30 @@ return res.json({success:'login suucess',token})
  }
 
 
-    module.exports = { getUsers, saveUser,loginUser}
+
+ async  function updateUser(req,res,next){
+    
+const bearierToken=req.headers.authorization
+let token=null
+if(bearierToken){
+   token= bearierToken.split(" ")[1]
+try{
+    const payload=jwt.verify(token,'1234')
+    console.log(payload)
+}catch(error){
+
+}
+   
+}else{
+    res.status(400)
+    const err=new Error("plase login to update")
+    return next(err)
+}
+res.json({})
+    
+
+
+ }
+
+
+    module.exports = { getUsers, saveUser,loginUser,updateUser}

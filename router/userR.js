@@ -1,10 +1,10 @@
 const express=require('express')
-const {getUsers,saveUser,loginUser}=require('../controller/userC')
+const {getUsers,saveUser,loginUser,updateUser}=require('../controller/userC')
 const userRouter=express.Router()
 
 userRouter
 .get('/',getUsers)
-.put('',)
+.put('/',updateUser)
 .post('/',saveUser)
 .post('/login',loginUser)
 .delete('',)
